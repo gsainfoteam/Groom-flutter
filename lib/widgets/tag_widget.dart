@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
+enum TagType { boolean, text, fixed }
+
 class TagWidget extends StatelessWidget {
-  const TagWidget({super.key, required this.tagName, required this.tagValue});
+  const TagWidget({
+    super.key,
+    required this.tagName,
+    required this.tagValue,
+    required this.tagType,
+  });
   final String tagName;
-  final bool tagValue;
+  final dynamic tagValue;
+  final TagType tagType;
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +23,7 @@ class TagWidget extends StatelessWidget {
       padding: EdgeInsets.all(5),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
+        textBaseline: TextBaseline.alphabetic,
         children: [
           Text(
             tagName,
