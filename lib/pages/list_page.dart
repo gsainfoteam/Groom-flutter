@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groom_flutter/widgets/profile_card.dart';
+import 'package:groom_flutter/widgets/profile_card_widget.dart';
 
 class ListPage extends StatelessWidget {
   const ListPage({super.key});
@@ -7,14 +7,27 @@ class ListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        leading: Icon(Icons.arrow_back_ios_outlined),
-        title: const Text("Groom-App"),
-      ),
+      appBar: AppBar(title: const Text("Groom-App")),
       body: Container(
         padding: EdgeInsets.fromLTRB(35, 30, 35, 10),
         child: ListView(
-          children: [ProfileCard(), ProfileCard(), ProfileCard()],
+          children: [
+            ProfileCardWidget(
+              nickname: "TKJF",
+              studentNumber: 20255092,
+              mbti: "ISTP",
+            ),
+            ProfileCardWidget(
+              nickname: "TKJF",
+              studentNumber: 20255092,
+              mbti: "ISTP",
+            ),
+            ProfileCardWidget(
+              nickname: "TKJF",
+              studentNumber: 20255092,
+              mbti: "ISTP",
+            ),
+          ],
         ),
       ),
     );

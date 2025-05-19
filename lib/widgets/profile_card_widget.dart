@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:groom_flutter/widgets/tag_widget.dart';
 
-class ProfileCard extends StatelessWidget {
-  const ProfileCard({super.key});
+class ProfileCardWidget extends StatelessWidget {
+  const ProfileCardWidget({
+    super.key,
+    required this.nickname,
+    required this.mbti,
+    required this.studentNumber,
+  });
+
+  final String nickname, mbti;
+  final int studentNumber;
 
   @override
   Widget build(BuildContext context) {
@@ -27,9 +35,13 @@ class ProfileCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(children: [Text("TKJFTKJF", textAlign: TextAlign.left)]),
+              Row(children: [Text(nickname, textAlign: TextAlign.left)]),
               Row(
-                children: [Text("20255092"), SizedBox(width: 25), Text("ISTP")],
+                children: [
+                  Text(studentNumber.toString()),
+                  SizedBox(width: 25),
+                  Text(mbti),
+                ],
               ),
               Wrap(
                 direction: Axis.horizontal,
