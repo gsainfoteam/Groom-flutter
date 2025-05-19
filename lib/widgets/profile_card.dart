@@ -9,7 +9,10 @@ class ProfileCard extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(bottom: 15),
       padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(color: Colors.blueGrey.shade200),
+      decoration: BoxDecoration(
+        color: Colors.blueGrey.shade200,
+        borderRadius: BorderRadius.all(Radius.circular(10)),
+      ),
       child: Row(
         children: [
           Container(
