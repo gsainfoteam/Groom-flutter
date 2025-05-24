@@ -1,6 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:groom_flutter/pages/chatting_list_page.dart';
 import 'package:groom_flutter/pages/list_page.dart';
+import 'package:groom_flutter/pages/profile_page.dart';
+import 'package:groom_flutter/constants/theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +14,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(title: "Groom-App", home: MyHome());
+    return MaterialApp(
+      title: "Groom-App",
+      home: const MyHome(),
+      theme: defaultTheme,
+    );
   }
 }
 
@@ -36,9 +43,9 @@ class _MyHomeState extends State<MyHome> with TickerProviderStateMixin {
     return Scaffold(
       body: TabBarView(
         dragStartBehavior: DragStartBehavior.start,
-        physics: NeverScrollableScrollPhysics(),
+        physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
-        children: [ListPage(), ListPage(), ListPage()],
+        children: [ListPage(), ChattingListPage(), ProfilePage()],
       ),
       bottomNavigationBar: TabBar(
         controller: _tabController,
