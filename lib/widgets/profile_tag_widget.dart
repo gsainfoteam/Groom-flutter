@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 enum TagType { boolean, text, time }
 
-class TagWidget extends StatelessWidget {
-  const TagWidget({
+class ProfileTagWidget extends StatelessWidget {
+  const ProfileTagWidget({
     super.key,
     required this.tagName,
     required this.tagValue,
@@ -44,28 +44,20 @@ class TagWidget extends StatelessWidget {
 
     return Container(
       decoration: BoxDecoration(
-        color: Colors.blue.shade100,
+        color: Theme.of(context).colorScheme.primary,
         borderRadius: BorderRadius.all(Radius.circular(19)),
       ),
-      padding: EdgeInsets.all(5),
+      padding: EdgeInsets.all(8),
       child: Row(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         textBaseline: TextBaseline.alphabetic,
         children: [
-          Text(
-            tagName,
-            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
-          ),
+          Text(tagName, style: Theme.of(context).textTheme.bodyMedium),
           SizedBox(width: 5),
-          Text(
-            ":",
-            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
-          ),
+          Text(":", style: Theme.of(context).textTheme.bodyMedium),
           SizedBox(width: 5),
-          Text(
-            tagValueOutput,
-            style: TextStyle(fontSize: 10, fontWeight: FontWeight.w500),
-          ),
+          Text(tagValueOutput, style: Theme.of(context).textTheme.bodyMedium),
         ],
       ),
     );
