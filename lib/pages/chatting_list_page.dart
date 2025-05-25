@@ -11,11 +11,13 @@ class ChattingListPage extends StatefulWidget {
 class _ChattingListPageState extends State<ChattingListPage> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.fromLTRB(35, 30, 35, 10),
-      width: double.infinity,
-      child: ListView(
-        children: [ChatTileWidget(), ChatTileWidget(), ChatTileWidget()],
+    return Scaffold(
+      body: Container(
+        padding: EdgeInsets.fromLTRB(35, 30, 35, 10),
+        width: double.infinity,
+        child: ListView(
+          children: [ChatTileWidget(), ChatTileWidget(), ChatTileWidget()],
+        ),
       ),
     );
   }
