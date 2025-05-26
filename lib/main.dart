@@ -48,6 +48,7 @@ class _MyHomeState extends State<MyHome> with TickerProviderStateMixin {
         children: [ListPage(), ChattingListPage(), ProfilePage()],
       ),
       bottomNavigationBar: TabBar(
+        labelPadding: EdgeInsets.only(bottom: 8),
         controller: _tabController,
         tabs: [
           Tab(icon: Icon(Icons.home)),
