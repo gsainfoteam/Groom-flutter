@@ -34,7 +34,7 @@ class ProfileCardWidget extends StatelessWidget {
                 Row(children: [Text(user.nickname, textAlign: TextAlign.left)]),
                 Row(
                   children: [
-                    Text(user.studentNumber.toString()),
+                    Text("${user.studentNumber}학번"),
                     SizedBox(width: 25),
                     Text(user.stringMbti()),
                   ],
