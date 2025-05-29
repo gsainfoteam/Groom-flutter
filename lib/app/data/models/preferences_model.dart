@@ -9,8 +9,8 @@ class PreferencesModel with _$PreferencesModel {
   const factory PreferencesModel({
     required bool isSnoring,
     required bool isSmoking,
-    required String sleepTime,
-    required String wakeUpTime,
+    required int sleepTime,
+    required int wakeUpTime,
     required bool hasRefrigerator,
     required bool isColdSensitive,
     required bool isHotSensitive,

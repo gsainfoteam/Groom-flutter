@@ -1,8 +1,8 @@
 class PreferencesEntity {
   final bool isSnoring;
   final bool isSmoking;
-  final String sleepTime;
-  final String wakeUpTime;
+  final int sleepTime;
+  final int wakeUpTime;
   final bool hasRefrigerator;
   final bool isColdSensitive;
   final bool isHotSensitive;
@@ -18,4 +18,17 @@ class PreferencesEntity {
     required this.isHotSensitive,
     required this.cleanupFrequency,
   });
+
+  static PreferencesEntity mock() {
+    return PreferencesEntity(
+      isSnoring: false,
+      isSmoking: false,
+      sleepTime: 1,
+      wakeUpTime: 3,
+      hasRefrigerator: true,
+      isColdSensitive: false,
+      isHotSensitive: false,
+      cleanupFrequency: 7,
+    );
+  }
 }
