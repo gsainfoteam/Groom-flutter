@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:groom_flutter/pages/chatting_list_page.dart';
-import 'package:groom_flutter/pages/list_page.dart';
-import 'package:groom_flutter/pages/profile_page.dart';
-import 'package:groom_flutter/constants/theme.dart';
+import 'package:groom_flutter/app/presentation/pages/chatting_list_page.dart';
+import 'package:groom_flutter/app/presentation/pages/list_page.dart';
+import 'package:groom_flutter/app/presentation/pages/profile_page.dart';
+import 'package:groom_flutter/app/data/constants/theme.dart';
 
 void main() {
   runApp(const MyApp());
