@@ -10,7 +10,7 @@ class ChatTileWidget extends StatelessWidget {
       padding: EdgeInsets.all(4),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(8),
-        color: Theme.of(context).colorScheme.primary,
+        color: Theme.of(context).colorScheme.secondary,
       ),
       child: Row(
         children: [
