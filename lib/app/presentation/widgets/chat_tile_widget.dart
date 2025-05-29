@@ -7,6 +7,11 @@ class ChatTileWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(bottom: 10),
+      padding: EdgeInsets.all(4),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8),
+        color: Theme.of(context).colorScheme.primary,
+      ),
       child: Row(
         children: [
           Container(width: 50, height: 50, color: Colors.black),
@@ -30,7 +35,7 @@ class ChatTileWidget extends StatelessWidget {
                 ),
                 SizedBox(height: 3),
                 Text(
-                  "Hi! How's your day? Isn't it good? 이것은 한국어 테스트 글입니다. 하지만 더 길어지면",
+                  "동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세. 무궁화 삼천리 화려강산. 대한사람 대한으로 길이 보전하세.",
                   style: Theme.of(context).textTheme.bodyMedium,
                   overflow: TextOverflow.ellipsis,
                   maxLines: 2,
