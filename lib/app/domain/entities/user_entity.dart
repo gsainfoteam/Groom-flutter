@@ -39,7 +39,8 @@ class UserEntity with _$UserEntity {
       isT: false,
       isJ: true, // ESTJ
       preferences: PreferencesEntity.mock(), // Use mock PreferencesEntity
-      introduction: 'This is a mock user entity for testing.',
+      introduction:
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec volutpat ornare tempor. Duis nibh neque, euismod a ultricies non, viverra nec purus. Maecenas sollicitudin vestibulum risus, eu hendrerit turpis faucibus quis. Nullam tincidunt enim a nunc gravida pharetra. Nam et vulputate neque, quis tincidunt tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec tincidunt mattis mauris, a suscipit augue lobortis sed. Etiam placerat tincidunt ante, in lobortis dolor sodales at. Vivamus vel aliquam nulla, a luctus libero. Ut bibendum et odio id tincidunt.',
     );
   }
 }
