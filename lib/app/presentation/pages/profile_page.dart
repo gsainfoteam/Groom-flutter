@@ -68,7 +68,7 @@ class ProfilePage extends StatelessWidget {
                       tagType: TagType.time,
                     ),
                     ProfileTagWidget(
-                      tagName: "냉장고",
+                      tagName: "냉장고 유무",
                       tagValue: user.preferences.hasRefrigerator,
                       tagType: TagType.boolean,
                     ),

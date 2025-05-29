@@ -67,7 +67,7 @@ class ProfileCardWidget extends StatelessWidget {
                       tagType: TagType.time,
                     ),
                     CardTagWidget(
-                      tagName: "냉장고",
+                      tagName: "냉장고 유무",
                       tagValue: user.preferences.hasRefrigerator,
                       tagType: TagType.boolean,
                     ),
