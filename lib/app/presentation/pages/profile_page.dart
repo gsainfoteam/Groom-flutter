@@ -83,9 +83,9 @@ class ProfilePage extends StatelessWidget {
                       tagType: TagType.boolean,
                     ),
                     ProfileTagWidget(
-                      tagName: "청소횟수(1주)",
-                      tagValue: user.preferences.cleanupFrequency,
-                      tagType: TagType.boolean,
+                      tagName: "청소주기",
+                      tagValue: "${user.preferences.cleanupFrequency}회/주",
+                      tagType: TagType.text,
                     ),
                   ],
                 ),
