@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:groom_flutter/app/domain/entities/preferences_entity.dart';
 
 part 'preferences_model.freezed.dart';
 part 'preferences_model.g.dart';
@@ -18,4 +19,19 @@ class PreferencesModel with _$PreferencesModel {
 
   factory PreferencesModel.fromJson(Map<String, dynamic> json) =>
       _$PreferencesModelFromJson(json);
+}
+
+extension PrefernecesMapper on PreferencesModel {
+  PreferencesEntity toEntity() {
+    return PreferencesEntity(
+      isSnoring: isSnoring,
+      isSmoking: isSmoking,
+      sleepTime: sleepTime,
+      wakeUpTime: wakeUpTime,
+      hasRefrigerator: hasRefrigerator,
+      isColdSensitive: isColdSensitive,
+      isHotSensitive: isHotSensitive,
+      cleanupFrequency: cleanupFrequency,
+    );
+  }
 }
