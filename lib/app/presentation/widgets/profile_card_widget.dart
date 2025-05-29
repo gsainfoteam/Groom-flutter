@@ -36,7 +36,7 @@ class ProfileCardWidget extends StatelessWidget {
                   children: [
                     Text(user.studentNumber.toString()),
                     SizedBox(width: 25),
-                    Text(user.mbtiString()),
+                    Text(user.stringMbti()),
                   ],
                 ),
                 Wrap(

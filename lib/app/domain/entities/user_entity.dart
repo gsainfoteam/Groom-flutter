@@ -23,7 +23,7 @@ class UserEntity with _$UserEntity {
 }
 
 extension UserMbtiMapper on UserEntity {
-  String mbtiString() {
+  String stringMbti() {
     String result = '';
     result += isE ? 'E' : 'I';
     result += isS ? 'S' : 'N';
