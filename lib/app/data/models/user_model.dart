@@ -9,6 +9,8 @@ part 'user_model.g.dart';
 class UserModel with _$UserModel {
   const factory UserModel({
     required String profileImage,
+    required int uuid,
+    required bool isMale,
     required String nickname,
     required int studentNumber,
     required String major,
@@ -34,6 +36,8 @@ extension UserMapper on UserModel {
 
     return UserEntity(
       profileImage: profileImage,
+      uuid: uuid,
+      isMale: isMale,
       nickname: nickname,
       studentNumber: studentNumber,
       major: major,

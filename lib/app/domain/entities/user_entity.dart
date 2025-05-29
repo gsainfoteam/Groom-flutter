@@ -7,6 +7,8 @@ part 'user_entity.freezed.dart';
 class UserEntity with _$UserEntity {
   const factory UserEntity({
     required String profileImage,
+    required int uuid,
+    required bool isMale,
     required String nickname,
     required int studentNumber,
     required String major,
@@ -24,6 +26,8 @@ class UserEntity with _$UserEntity {
   static UserEntity mock() {
     return UserEntity(
       profileImage: 'encoded data',
+      uuid: 123,
+      isMale: true,
       nickname: 'Mock User',
       studentNumber: 19,
       major: 'Computer Science',
