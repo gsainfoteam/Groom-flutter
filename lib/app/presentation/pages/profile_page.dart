@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:groom_flutter/widgets/labeled_text_widget.dart';
-import 'package:groom_flutter/widgets/profile_tag_widget.dart';
+import 'package:groom_flutter/app/presentation/widgets/labeled_text_widget.dart';
+import 'package:groom_flutter/app/presentation/widgets/profile_tag_widget.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});

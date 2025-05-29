@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groom_flutter/widgets/chat_bubble_widget.dart';
+import 'package:groom_flutter/app/presentation/widgets/chat_bubble_widget.dart';
 
 class ChattingPage extends StatefulWidget {
   const ChattingPage({super.key});

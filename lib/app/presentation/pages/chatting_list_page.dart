@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groom_flutter/widgets/chat_tile_widget.dart';
+import 'package:groom_flutter/app/presentation/widgets/chat_tile_widget.dart';
 
 class ChattingListPage extends StatefulWidget {
   const ChattingListPage({super.key});

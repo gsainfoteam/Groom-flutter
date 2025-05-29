@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groom_flutter/widgets/profile_card_widget.dart';
+import 'package:groom_flutter/app/presentation/widgets/profile_card_widget.dart';
 
 class ListPage extends StatelessWidget {
   const ListPage({super.key});

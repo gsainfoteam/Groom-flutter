@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:groom_flutter/widgets/card_tag_widget.dart';
+import 'package:groom_flutter/app/presentation/widgets/card_tag_widget.dart';
 
 class ProfileCardWidget extends StatelessWidget {
   const ProfileCardWidget({

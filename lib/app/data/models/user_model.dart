@@ -1,4 +1,4 @@
-import 'package:groom_flutter/data/models/preferences_model.dart';
+import 'package:groom_flutter/app/data/models/preferences_model.dart';
 
 class UserModel {
   final String profileImage;
