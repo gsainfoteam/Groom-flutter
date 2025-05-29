@@ -20,6 +20,24 @@ class UserEntity with _$UserEntity {
     required PreferencesEntity preferences,
     required String introduction,
   }) = _UserEntity;
+
+  static UserEntity mock() {
+    return UserEntity(
+      profileImage: 'encoded data',
+      nickname: 'Mock User',
+      studentNumber: 19,
+      major: 'Computer Science',
+      age: 25,
+      gender: 'Non-binary',
+      nationality: 'Global',
+      isE: true,
+      isS: true,
+      isT: false,
+      isJ: true, // ESTJ
+      preferences: PreferencesEntity.mock(), // Use mock PreferencesEntity
+      introduction: 'This is a mock user entity for testing.',
+    );
+  }
 }
 
 extension UserMbtiMapper on UserEntity {

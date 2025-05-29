@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:groom_flutter/app/domain/entities/user_entity.dart';
 import 'package:groom_flutter/app/presentation/pages/chatting_list_page.dart';
 import 'package:groom_flutter/app/presentation/pages/list_page.dart';
 import 'package:groom_flutter/app/presentation/pages/profile_page.dart';
@@ -45,7 +46,11 @@ class _MyHomeState extends State<MyHome> with TickerProviderStateMixin {
         dragStartBehavior: DragStartBehavior.start,
         physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
-        children: [ListPage(), ChattingListPage(), ProfilePage()],
+        children: [
+          ListPage(),
+          ChattingListPage(),
+          ProfilePage(user: UserEntity.mock()),
+        ],
       ),
       bottomNavigationBar: TabBar(
         labelPadding: EdgeInsets.only(bottom: 8),

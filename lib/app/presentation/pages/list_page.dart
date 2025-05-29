@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:groom_flutter/app/domain/entities/user_entity.dart';
 import 'package:groom_flutter/app/presentation/widgets/profile_card_widget.dart';
 
 class ListPage extends StatelessWidget {
@@ -12,21 +13,9 @@ class ListPage extends StatelessWidget {
         padding: EdgeInsets.fromLTRB(35, 30, 35, 10),
         child: ListView(
           children: [
-            ProfileCardWidget(
-              nickname: "TKJF",
-              studentNumber: 20255092,
-              mbti: "ISTP",
-            ),
-            ProfileCardWidget(
-              nickname: "TKJF",
-              studentNumber: 20255092,
-              mbti: "ISTP",
-            ),
-            ProfileCardWidget(
-              nickname: "TKJF",
-              studentNumber: 20255092,
-              mbti: "ISTP",
-            ),
+            ProfileCardWidget(user: UserEntity.mock()),
+            ProfileCardWidget(user: UserEntity.mock()),
+            ProfileCardWidget(user: UserEntity.mock()),
           ],
         ),
       ),
