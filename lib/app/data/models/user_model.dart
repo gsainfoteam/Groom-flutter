@@ -1,27 +1,23 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:groom_flutter/app/data/models/preferences_model.dart';
 
-class UserModel {
-  final String profileImage;
-  final String nickname;
-  final int studentNumber;
-  final String major;
-  final int age;
-  final String gender;
-  final String nationality;
-  final int mbti;
-  final PreferencesModel preferences;
-  final String introduction;
+part 'user_model.freezed.dart';
+part 'user_model.g.dart';
 
-  const UserModel({
-    required this.profileImage,
-    required this.nickname,
-    required this.studentNumber,
-    required this.major,
-    required this.age,
-    required this.gender,
-    required this.nationality,
-    required this.mbti,
-    required this.preferences,
-    required this.introduction,
-  });
+@freezed
+abstract class UserModel with _$UserModel {
+  const factory UserModel({
+    required String profileImage,
+    required String nickname,
+    required int studentNumber,
+    required String major,
+    required int age,
+    required String gender,
+    required String nationality,
+    required int mbti,
+    required PreferencesModel preferences,
+    required String introduction,
+  }) = _UserModel;
+  factory UserModel.fromJson(Map<String, dynamic> json) =>
+      _$UserModelFromJson(json);
 }
