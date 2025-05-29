@@ -10,7 +10,7 @@ class ListPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Groom-App")),
       body: Container(
-        padding: EdgeInsets.fromLTRB(35, 30, 35, 10),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 8),
         child: ListView(
           children: [
             ProfileCardWidget(user: UserEntity.mock()),

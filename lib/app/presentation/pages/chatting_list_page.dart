@@ -13,7 +13,7 @@ class _ChattingListPageState extends State<ChattingListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: EdgeInsets.fromLTRB(35, 30, 35, 10),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 8),
         width: double.infinity,
         child: ListView(
           children: [ChatTileWidget(), ChatTileWidget(), ChatTileWidget()],

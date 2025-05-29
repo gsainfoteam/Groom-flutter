@@ -13,7 +13,7 @@ class ProfilePage extends StatelessWidget {
       appBar: AppBar(title: const Text("TKJF")),
       body: Container(
         width: double.infinity,
-        padding: EdgeInsets.fromLTRB(35, 30, 35, 10),
+        padding: EdgeInsets.fromLTRB(16, 16, 16, 8),
         child: SingleChildScrollView(
           child: Column(
             children: [
