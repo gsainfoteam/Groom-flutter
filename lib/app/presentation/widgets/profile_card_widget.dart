@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:groom_flutter/app/domain/entities/user_entity.dart';
 import 'package:groom_flutter/app/presentation/widgets/card_tag_widget.dart';
 
 class ProfileCardWidget extends StatelessWidget {
-  const ProfileCardWidget({
-    super.key,
-    required this.nickname,
-    required this.mbti,
-    required this.studentNumber,
-  });
+  const ProfileCardWidget({super.key, required this.user});
 
-  final String nickname, mbti;
-  final int studentNumber;
+  final UserEntity user;
 
   @override
   Widget build(BuildContext context) {
@@ -36,48 +31,59 @@ class ProfileCardWidget extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Row(children: [Text(nickname, textAlign: TextAlign.left)]),
+                Row(children: [Text(user.nickname, textAlign: TextAlign.left)]),
                 Row(
                   children: [
-                    Text(studentNumber.toString()),
+                    Text(user.studentNumber.toString()),
                     SizedBox(width: 25),
-                    Text(mbti),
+                    Text(user.mbtiString()),
                   ],
                 ),
                 Wrap(
+                  /* 현재 하드코딩 되어있음 해결책 필요. */
                   direction: Axis.horizontal,
                   alignment: WrapAlignment.start,
                   spacing: 8,
                   runSpacing: 8,
                   children: [
                     CardTagWidget(
-                      tagName: "코골이",
-                      tagValue: false,
+                      tagName: "코곪",
+                      tagValue: user.preferences.isSnoring,
                       tagType: TagType.boolean,
                     ),
                     CardTagWidget(
                       tagName: "흡연",
-                      tagValue: true,
+                      tagValue: user.preferences.isSmoking,
                       tagType: TagType.boolean,
+                    ),
+                    CardTagWidget(
+                      tagName: "평균 기상시간",
+                      tagValue: user.preferences.wakeUpTime,
+                      tagType: TagType.time,
+                    ),
+                    CardTagWidget(
+                      tagName: "평균 수면시간",
+                      tagValue: user.preferences.sleepTime,
+                      tagType: TagType.time,
                     ),
                     CardTagWidget(
                       tagName: "냉장고",
-                      tagValue: false,
+                      tagValue: user.preferences.hasRefrigerator,
                       tagType: TagType.boolean,
                     ),
                     CardTagWidget(
-                      tagName: "청소주기",
-                      tagValue: "5회 / 일주일",
-                      tagType: TagType.text,
-                    ),
-                    CardTagWidget(
-                      tagName: "흡연",
-                      tagValue: true,
+                      tagName: "추위잘탐",
+                      tagValue: user.preferences.isColdSensitive,
                       tagType: TagType.boolean,
                     ),
                     CardTagWidget(
-                      tagName: "냉장고",
-                      tagValue: false,
+                      tagName: "더위잘탐",
+                      tagValue: user.preferences.isHotSensitive,
+                      tagType: TagType.boolean,
+                    ),
+                    CardTagWidget(
+                      tagName: "청소횟수(1주)",
+                      tagValue: user.preferences.cleanupFrequency,
                       tagType: TagType.boolean,
                     ),
                   ],
