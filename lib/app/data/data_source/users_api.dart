@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:groom_flutter/app/data/models/user_list_model.dart';
 import 'package:retrofit/retrofit.dart';
 import 'package:groom_flutter/app/data/models/user_model.dart';
-import 'package:groom_flutter/app/data/models/token_request_model.dart';
 
 part 'users_api.g.dart';
 
