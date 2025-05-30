@@ -7,6 +7,6 @@ part 'user_list_entity.freezed.dart';
 class UserListEntity with _$UserListEntity {
   const factory UserListEntity({
     required int count,
-    required List<UserEntity> userEntityList,
+    required List<UserEntity> list,
   }) = _UserListEntity;
 }

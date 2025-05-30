@@ -22,6 +22,6 @@ extension UserListMapper on UserListModel {
     final List<UserEntity> entityList =
         userModelList.map((userModel) => userModel.toEntity()).toList();
 
-    return UserListEntity(count: count, userEntityList: entityList);
+    return UserListEntity(count: count, list: entityList);
   }
 }
