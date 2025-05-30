@@ -32,6 +32,7 @@ class MyHome extends StatefulWidget {
 class _MyHomeState extends State<MyHome> with TickerProviderStateMixin {
   late TabController _tabController;
 
+  final int _uuid = 123123;
   @override
   void initState() {
     super.initState();
@@ -45,7 +46,11 @@ class _MyHomeState extends State<MyHome> with TickerProviderStateMixin {
         dragStartBehavior: DragStartBehavior.start,
         physics: const NeverScrollableScrollPhysics(),
         controller: _tabController,
-        children: [ListPage(), ChattingListPage(), ProfilePage(uuid: 123123)],
+        children: [
+          ListPage(uuid: _uuid),
+          ChattingListPage(),
+          ProfilePage(uuid: _uuid),
+        ],
       ),
       bottomNavigationBar: TabBar(
         labelPadding: EdgeInsets.only(bottom: 8),
