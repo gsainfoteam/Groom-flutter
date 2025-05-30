@@ -42,7 +42,6 @@ extension UserMapper on UserModel {
       studentNumber: studentNumber,
       major: major,
       age: age,
-      gender: gender,
       nationality: nationality,
       isE: isE,
       isS: isS,
